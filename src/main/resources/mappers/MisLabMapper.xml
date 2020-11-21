@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgl.zhuye.dao.MisLabMapper">
+    <select id="getMisLabInfo" resultType="MisLabInfo">
+        SELECT * FROM mislabinfo WHERE describes = #{describes};
+    </select>
+
+    <select id="listMisLabInfo" resultType="MisLabInfo">
+        SELECT * FROM mislabinfo;
+    </select>
+    <select id="listMisLabProjectInfo" resultType="MisLabInfo">
+        SELECT * FROM mislabinfo where type = #{type}
+    </select>
+</mapper>
